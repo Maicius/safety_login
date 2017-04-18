@@ -14,7 +14,7 @@
 <form action="\userLogin.action" method="get">
     <input type="text" name="userName" placeholder="用户名"/>
     <input type="password" name="password" placeholder="密码" />
-    <input type="submit" about="登陆"/>
+    <input type="submit" value="登陆"/>
 </form>
 </body>
 </html>
