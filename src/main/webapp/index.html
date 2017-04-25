@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head lang="zh-CN">
     <title>Safety Login</title>
@@ -7,13 +8,13 @@
                                      maximum-scale=1.0,
                                      user-scalable=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.js"></script>
-    <script src="WEB-INF/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="WEB-INF/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="WEB-INF/css/myStyle.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="WEB-INF/css/htmleaf-demo.css">
+    <script src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./css/myStyle.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/htmleaf-demo.css">
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,600'>
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link rel="stylesheet" href="WEB-INF/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div class="htmleaf-container">
@@ -21,7 +22,7 @@
         <header class="htmleaf-header">
                 <h1>Safety Login <span>protect your privacy</span></h1>
         </header>
-        <form action="/userLogin.action">
+        <form action="/userLogin.action" method="get">
             <div class="cont_join">
                 <div class="cont_letras">
                     <p>LET 'S</p>
@@ -33,10 +34,10 @@
                     <h2>JOIN</h2>
 
                     <p>用户名:</p>
-                    <input type="text" class="input_text" />
+                    <input type="text" class="input_text" name="userName"/>
 
                     <p>密　码:</p>
-                    <input type="password" class="input_text" />
+                    <input type="password" class="input_text" name="password"/>
 
                     <p>验证码:</p>
                     <input type="text" class="input_text" />
@@ -53,7 +54,7 @@
         </form>
     </div>
 </div>
-<script src="WEB-INF/js/index.js"></script>
+<script src="/js/index.js"></script>
 
 </body>
 
