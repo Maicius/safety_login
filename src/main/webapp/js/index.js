@@ -19,6 +19,15 @@ function join_1(){
     }
     else{
         t++;
+        $.ajax({
+            url:"/userLogin.action",
+            type:"get",
+            data:{userName:$("#userName").val(),
+                    password:$("#password").val()},
+            success:function(data){
+                alert(data);
+            }
+        })
         document.querySelector('.cont_form_join').style.bottom = '-420px';
         setTimeout(function(){
 	        document.querySelector('.cont_join').className = 'cont_join cont_join_form_act cont_join_finish';

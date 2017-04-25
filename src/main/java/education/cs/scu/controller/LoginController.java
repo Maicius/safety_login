@@ -21,7 +21,7 @@ public class LoginController {
     LoginService loginService;
 
     @RequestMapping(value="/userLogin")
-    public ModelAndView Test(HttpServletRequest request,
+    public String Test(HttpServletRequest request,
                              @RequestParam(value="userName") String userName,
                              @RequestParam(value="password") String password) throws Exception{
         User user = new User(userName, password);
@@ -38,7 +38,7 @@ public class LoginController {
         }
         mv.setViewName("login");
         System.out.println("Controller finished");
-        return mv;
+        return "success";
     }
 
 }
