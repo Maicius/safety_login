@@ -25,6 +25,7 @@ function join_1(){
             data:{userName:$("#userName").val(),
                     password:$("#password").val()},
             success:function(data){
+                t=0;
                 alert(data);
             }
         })
