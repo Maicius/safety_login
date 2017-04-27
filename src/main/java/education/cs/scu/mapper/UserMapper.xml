@@ -12,4 +12,9 @@
         WHERE  username = #{userName}
         AND password = #{password}
     </select>
+
+    <insert id="doUserRegister" parameterType="User">
+        INSERT INTO test(username, password)
+        VALUES (#{userName}, #{password})
+    </insert>
 </mapper>

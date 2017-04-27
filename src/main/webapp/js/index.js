@@ -37,3 +37,35 @@ function join_1(){
   }
 
 }
+
+
+
+jQuery(document).ready(function () {
+
+    $('#userNameReg').blur(function(){
+        $.ajax({
+            url:"/userRegister.action",
+            type:"get",
+            data:{userName:$("#userNameReg").val()},
+            success:function (data) {
+                if(data === 0){
+                    $('#userName_tip').style.color = '#FF3030';
+                }
+            }
+        });
+    });
+
+    $('#passwordReg').blur(function () {
+        var tip = $('#password_tip');
+        if($('#passwordReg').val().length < 6){
+            tip.text("密码不能短于6位");
+            tip.addClass("reg-warning");
+
+        }else{
+            tip.removeClass("reg-warning");
+            tip.text("密码");
+
+        }
+    })
+
+})

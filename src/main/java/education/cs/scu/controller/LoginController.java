@@ -1,7 +1,7 @@
 package education.cs.scu.controller;
 
 import education.cs.scu.entity.User;
-import education.cs.scu.service.LoginService;
+import education.cs.scu.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,16 +18,16 @@ import javax.servlet.http.HttpSession;
 public class LoginController {
 
     @Autowired
-    LoginService loginService;
+    userService userService;
 
     @RequestMapping(value="/userLogin")
-    public String Test(HttpServletRequest request,
+    public String userLogin(HttpServletRequest request,
                              @RequestParam(value="userName") String userName,
                              @RequestParam(value="password") String password) throws Exception{
         User user = new User(userName, password);
         System.out.println(userName);
         ModelAndView mv = new ModelAndView();
-        User loginUser = loginService.doUserLogin(user);
+        User loginUser = userService.doUserLogin(user);
         HttpSession session = request.getSession();
         if(loginUser != null) {
             session.setAttribute("user", loginUser);
@@ -39,6 +39,20 @@ public class LoginController {
         mv.setViewName("login");
         System.out.println("Controller finished");
         return "success";
+    }
+
+    @RequestMapping(value="/userRegister")
+    public ModelAndView userRegister(HttpServletRequest request,
+                               @RequestParam(value="userName") String userName,
+                               @RequestParam(value="password") String password,
+                               @RequestParam(value="nickName") String nickName) throws Exception{
+        User user = new User(userName, password);
+        ModelAndView mv = new ModelAndView();
+        int register = userService.doUserRegister(user);
+        System.out.println(register);
+
+        mv.setViewName("index 2");
+        return mv;
     }
 
 }

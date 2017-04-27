@@ -8,7 +8,6 @@
                                      maximum-scale=1.0,
                                      user-scalable=no">
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.5.3/echarts.common.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="assets/css/custom.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -35,7 +34,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Space</a></li>
-                    <li><a href="/register.html">Register</a></li>
+                    <li><a href="#">Register</a></li>
                     <li><a href="#">Login</a></li>
                 </ul>
             </div>
@@ -47,34 +46,32 @@
             <header class="htmleaf-header">
                 <h1>Safety Login <span>protect your privacy</span></h1>
             </header>
-            <div class="cont_join">
-                <div class="cont_letras">
-                    <p>LET 'S</p>
-                    <p>GET</p>
-                    <p>LOST</p>
+            <form action="/userRegister.action" method="get">
+                <div class="cont_join">
+                    <div class="cont_form_join_register">
+                        <br>
+                        <p id="userName_tip">用户名:</p>
+                        <input type="text" class="input_text" name="userName" id="userNameReg" placeholder="电话号码" onblur=""/>
+
+                        <p id="password_tip">密　码:</p>
+                        <input type="password" class="input_text" name="password" id="passwordReg" placeholder="不得短于6位"/>
+
+                        <p id="password_confirm_tip">确认密码:</p>
+                        <input type="password" class="input_text" name="password_confirm" title="test"/>
+
+                        <p id="nickName_tip">昵称</p>
+                        <input type="text" class="input_text" name="nickName" placeholder="请勿包含非法字符"/>
+                    </div>
+
+                    <div class="cont_join_form_finish">
+                        <h2>Finish <i class="material-icons">&#xE5CA;</i></h2>
+                    </div>
+
+                    <div class="cont_btn_join">
+                        <button type="submit" class="input_text">Register</button>
+                    </div>
                 </div>
-
-                <div class="cont_form_join">
-                    <h2>JOIN</h2>
-
-                    <p>用户名:</p>
-                    <input type="text" class="input_text" id="userName"/>
-
-                    <p>密　码:</p>
-                    <input type="password" class="input_text" id="password"/>
-
-                    <p>验证码:</p>
-                    <input type="text" class="input_text"/>
-                </div>
-
-                <div class="cont_join_form_finish">
-                    <h2>Finish <i class="material-icons">&#xE5CA;</i></h2>
-                </div>
-
-                <div class="cont_btn_join">
-                    <a href="#" onclick='join_1()'>JOIN</a>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
