@@ -41,12 +41,20 @@ function join_1(){
 
 
 jQuery(document).ready(function () {
-
     $('#userNameReg').blur(function(){
+        var userNameReg = $('#userNameReg');
+        var tip = $('#userName_tip');
+        if(!(/^1[34578]\d{9}$/.test(userNameReg.val()))){
+            tip.addClass("reg-warning");
+            tip.text("错误的手机号");
+        }else{
+            tip.removeClass("reg-warning");
+            tip.text("用户名");
+        }
         $.ajax({
             url:"/userRegister.action",
             type:"get",
-            data:{userName:$("#userNameReg").val()},
+            data:{userName:userNameReg},
             success:function (data) {
                 if(data === 0){
                     $('#userName_tip').style.color = '#FF3030';
@@ -66,6 +74,6 @@ jQuery(document).ready(function () {
             tip.text("密码");
 
         }
-    })
+    });
 
-})
+});
