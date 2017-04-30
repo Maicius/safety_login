@@ -130,6 +130,7 @@
   height:94%;
   float:left;
   left:0px;
+  color:black;
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
@@ -170,6 +171,18 @@ color:#777;
   border:1px solid rgba(0, 0, 0, 0.2);
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.6);
+  border-radius:10px;
+  text-align:left;
+}
+
+
+.identify_code{
+  padding:8px;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  left:0px;
+  width: 150px;
+  background-color:rgba(255, 255, 255, 0.6);
   border-radius:10px;
   text-align:left;
 }
