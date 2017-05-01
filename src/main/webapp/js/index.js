@@ -63,6 +63,11 @@ jQuery(document).ready(function () {
         });
     });
 
+    $("#identify").onclick(function(){
+        $.ajax({
+            url:"/"
+        })
+    });
     $('#passwordReg').blur(function () {
         var tip = $('#password_tip');
         if($('#passwordReg').val().length < 6){

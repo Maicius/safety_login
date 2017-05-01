@@ -55,4 +55,10 @@ public class LoginController {
         return mv;
     }
 
+    @RequestMapping(value="/identifyCode")
+    public String identifyCode(HttpServletRequest request,
+                                     @RequestParam(value="userNameReg") String userNameReg) throws Exception{
+
+    }
+
 }
