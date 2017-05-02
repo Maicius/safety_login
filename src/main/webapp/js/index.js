@@ -28,7 +28,7 @@ function join_1(){
                 t=0;
                 alert(data);
             }
-        })
+        });
         document.querySelector('.cont_form_join').style.bottom = '-420px';
         setTimeout(function(){
 	        document.querySelector('.cont_join').className = 'cont_join cont_join_form_act cont_join_finish';
@@ -41,6 +41,9 @@ function join_1(){
 
 
 jQuery(document).ready(function () {
+    /*
+     register.html
+     */
     $('#userNameReg').blur(function(){
         var userNameReg = $('#userNameReg');
         var tip = $('#userName_tip');
@@ -49,12 +52,12 @@ jQuery(document).ready(function () {
             tip.text("错误的手机号");
         }else{
             tip.removeClass("reg-warning");
-            tip.text("用户名");
+            tip.text("");
         }
         $.ajax({
             url:"/userRegister.action",
             type:"get",
-            data:{userName:userNameReg},
+            data:{userName:userNameReg.val()},
             success:function (data) {
                 if(data === 0){
                     $('#userName_tip').style.color = '#FF3030';
@@ -64,8 +67,14 @@ jQuery(document).ready(function () {
     });
 
     $("#identify").onclick(function(){
+        
         $.ajax({
-            url:"/"
+            url:"/identifyCode",
+            type:"get",
+            data:{userName:$("#userNameReg").val()},
+            success:function () {
+
+            }
         })
     });
     $('#passwordReg').blur(function () {
@@ -76,9 +85,44 @@ jQuery(document).ready(function () {
 
         }else{
             tip.removeClass("reg-warning");
-            tip.text("密码");
+            tip.text("");
 
         }
     });
 
+    $("#password_confirm").blur(function () {
+        var tip = $("#password_confirm_tip");
+        if($("#password_confirm").val() === $("#passwordReg").val()){
+            tip.removeClass("reg-warning");
+            tip.text("");
+        }else{
+            tip.addClass("reg-warning");
+            tip.text("两次密码不一致");
+        }
+    });
+    /************************
+     * register end
+     ***********************/
+
+    /**********************
+     * index.html, login
+     ************************/
+    $("#userName").blur(function () {
+        var tip = $("#login_username_tip");
+        $.ajax({
+            url:"/userIdentify",
+            type:"get",
+            data:{userName:$("#userName").val()},
+            success: function (data) {
+                if(data === "failed"){
+                    tip.addClass("reg-warning");
+                    tip.text("该用户不存在");
+                }
+                else{
+                    tip.addClass("login-welcome");
+                    tip.text("欢迎您,"+data);
+                }
+            }
+        });
+    })
 });
