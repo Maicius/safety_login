@@ -42,70 +42,68 @@
                         <img src="assets/img/find_user.png" class="img-responsive" />
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-desktop "></i>Dashboard</a>
+                        <a href="index.html"><i class="fa fa-desktop "></i>控制台</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>UI Elements<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-edit "></i>记事本<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Notifications</a>
+                                <a href="#">待办事项</a>
                             </li>
                             <li>
-                                <a href="#">Elements</a>
+                                <a href="#">公告</a>
                             </li>
                             <li>
-                                <a href="#">Free Link</a>
+                                <a href="#">意见箱</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-table "></i>Table Examples</a>
+                        <a href="#"><i class="fa fa-table "></i> 用户表</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>Forms </a>
+                        <a href="#"><i class="fa fa-edit "></i>数据库</a>
                     </li>
 
 
                     <li>
-                        <a href="#"><i class="fa fa-sitemap "></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap "></i>管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Link</a>
+                                <a href="#">数据库</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Link</a>
+                                <a href="#">商品</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <a href="#">用户<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="#">Third Level Link</a>
+                                        <a href="#">新增用户</a>
                                     </li>
                                     <li>
-                                        <a href="#">Third Level Link</a>
+                                        <a href="#">活跃用户</a>
                                     </li>
                                     <li>
-                                        <a href="#">Third Level Link</a>
+                                        <a href="#">老用户</a>
                                     </li>
-
                                 </ul>
-
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-qrcode "></i>Tabs & Panels</a>
+                        <a href="#"><i class="fa fa-qrcode "></i>商品分析</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i>Mettis Charts</a>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i>友情链接</a>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-edit "></i>Last Link </a>
+                        <a href="#"><i class="fa fa-edit "></i> 编辑 </a>
                     </li>
                     <li>
-                        <a href="blank.html"><i class="fa fa-table "></i>Blank Page</a>
+                        <a href="blank.html"><i class="fa fa-table "></i>其它</a>
                     </li>
                 </ul>
 
@@ -117,82 +115,66 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Admin Dashboard</h2>
+                        <h2>管理员控制台</h2>
                     </div>
                 </div>
                 <!-- /. ROW  -->
                 <hr />
                 <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <h5>Widget Box One</h5>
-                        <div class="panel panel-primary text-center no-boder bg-color-blue">
-                            <div class="panel-body">
-                                <i class="fa fa-bar-chart-o fa-5x"></i>
-                                <h3>120 GB </h3>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h5>活跃用户</h5>
+                        <div  class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body activityUser" id="echartEg">
+
                             </div>
                             <div class="panel-footer back-footer-blue">
-                                Disk Space Available
-                            
+                                Activity User Diagram
+
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <h5>Widget Box Two</h5>
-                        <div class="alert alert-info text-center">
-                            <i class="fa fa-desktop fa-5x"></i>
-                            <h3>100$ </h3>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <h5>今日盈利</h5>
+                        <div class="form-group goodsType" id="goodsType"></div>
                     </div>
+
+
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
                     <div class="col-md-6">
-                        <h5>Buttons Samples</h5>
-                        <a href="#" class="btn btn-default">default</a>
-                        <a href="#" class="btn btn-primary">primary</a>
-                        <a href="#" class="btn btn-danger">danger</a>
-                        <a href="#" class="btn btn-success">success</a>
-                        <a href="#" class="btn btn-info">info</a>
-                        <a href="#" class="btn btn-warning">warning</a>
+                        <h5>日常事项</h5>
+                        <a href="#" class="btn btn-default">用户</a>
+                        <a href="#" class="btn btn-primary">数据库</a>
+                        <a href="#" class="btn btn-danger">紧急</a>
+                        <a href="#" class="btn btn-success">活动</a>
+                        <a href="#" class="btn btn-info">意见箱</a>
+                        <a href="#" class="btn btn-warning">待办</a>
                         <br />
                         <br />
-                        <h5>Progressbar Samples</h5>
+                        <h5>已处理事务</h5>
                         <div class="progress progress-striped active">
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                 <span class="sr-only">40% Complete (success)</span>
                             </div>
                         </div>
+                        <h5>正在处理</h5>
                         <div class="progress progress-striped active">
                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                 <span class="sr-only">20% Complete</span>
                             </div>
                         </div>
-
-
-                    </div>
-
-                </div>
-                <!-- /. ROW  -->
-                <hr />
-                <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label>Text Input Example</label>
-                            <input class="form-control" />
-                            <p class="help-block">Help text here.</p>
-                        </div>
                     </div>
                     <div class="col-md-4">
-                        <label>Click to see blank page</label>
+                        <label>点击查看详情</label>
                         <a href="blank.html" target="_blank" class="btn btn-danger btn-lg btn-block">BLANK PAGE</a>
-                    </div>
-                    <div class="col-md-4">
-                        For More Examples Please visit official bootstrap website <a href="#" target="_blank">getbootstrap.com</a>
                     </div>
                 </div>
                 <hr />
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>Table  Sample One</h5>
+                        <h5>新注册用户</h5>
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -232,7 +214,7 @@
 
                     </div>
                     <div class="col-md-6">
-                        <h5>Table  Sample Two</h5>
+                        <h5>活跃用户</h5>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -273,125 +255,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /. ROW  -->
-                <hr />
-
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5>Panel Sample</h5>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                Default Panel
-                            </div>
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                            </div>
-                            <div class="panel-footer">
-                                Panel Footer
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Accordion Sample</h5>
-                        <div class="panel-group" id="accordion">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Collapsible Group Item #1</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
-                                    <div class="panel-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
-                                    <div class="panel-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Collapsible Group Item #3</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse">
-                                  
-
-                                        <div class="panel-body">
-                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Tabs Sample</h5>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#home" data-toggle="tab">Home</a>
-                            </li>
-                            <li class=""><a href="#profile" data-toggle="tab">Profile</a>
-                            </li>
-                            <li class=""><a href="#messages" data-toggle="tab">Messages</a>
-                            </li>
-
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active in" id="home">
-                                <h4>Home Tab</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                            <div class="tab-pane fade" id="profile">
-                                <h4>Profile Tab</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                </p>
-
-                            </div>
-                            <div class="tab-pane fade" id="messages">
-                                <h4>Messages Tab</h4>
-                                <p >
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum.
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /. ROW  -->
-                <hr />
-                  <div class="row">
-                    <div class="col-md-12">
-                        <h5>Information</h5>
-                            This is a type of bare admin that means you can customize your own admin using this admin structured  template . For More Examples of bootstrap elements or components please visit official bootstrap website <a href="#" target="_blank">getbootstrap.com</a>
-                        . And if you want full template please download <a href="#" target="_blank" >FREE BCORE ADMIN </a>&nbsp;,&nbsp;  <a href="#" target="_blank" >FREE SIMINTA ADMIN</a> and <a href="#" target="_blank" >FREE BINARY ADMIN</a>.More Templates <a href="" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-
-                    </div>
-                </div>
-                <!-- /. ROW  -->
-
-            </div>
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->
@@ -400,6 +263,7 @@
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/http_cdnjs.cloudflare.com_ajax_libs_echarts_3.5.3_echarts.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->

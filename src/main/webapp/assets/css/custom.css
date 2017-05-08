@@ -29,7 +29,7 @@ body {
     text-align:center;
 }
 .user-image-back {
-    background-color:#8B7BFF;
+    background-color:#0171ff;
 }
 h5,.h5 {
     font-size: 14px;
@@ -167,7 +167,7 @@ background-color: #8B7BFF;
     =============================================*/
 
 .bg-color-blue {
-background-color: #9A86EB;
+background-color: #1993ff;
 color: #fff;
 }
 
@@ -223,8 +223,8 @@ border-radius: 0px;
         min-height: 1200px;
 		
     }
-	
-	
+
+
     .navbar-side {
         z-index: 1;
         position: absolute;
@@ -235,6 +235,14 @@ border-radius: 0px;
  border-radius: 0px; 
 }
    
+}
+.activityUser{
+    height: 300px;
+    color: rgba(0, 0, 100, 0.5);
+}
+
+.goodsType{
+    height: 600px;
 }
 
 
